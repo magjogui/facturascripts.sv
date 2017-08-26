@@ -1,0 +1,60 @@
+{include="header"}
+
+<div class="container-fluid">
+   <div class="row">
+      <div class="col-sm-12">
+         <div class="page-header">
+            <h1>
+               <span class="glyphicon glyphicon-globe" aria-hidden="true"></span> El Salvador
+               <a class="btn btn-xs btn-default" href="{$fsc->url()}" title="Recargar la página">
+                  <span class="glyphicon glyphicon-refresh"></span>
+               </a>
+            </h1>
+            <p class="help-block">
+               Este plugin está en desarrollo. Eres libre de aportar lo que puedas:
+               <a href="https://www.facturascripts.com/plugin/elsalvador" target="_blank">https://www.facturascripts.com/plugin/elsalvador</a>
+            </p>
+         </div>
+      </div>
+   </div>
+   <div class="row">
+      <div class="col-sm-6">
+         {if="$fsc->empresa->coddivisa=='USD'"}
+         <a href="{$fsc->url()}&opcion=moneda" class="btn btn-block btn-success">
+            <span class="glyphicon glyphicon-ok"></span> &nbsp; Establecer Dolares de Estados unidos (USD) como moneda por defecto
+         </a>
+         {else}
+         <a href="{$fsc->url()}&opcion=moneda" class="btn btn-block btn-default">
+            <span class="badge">1</span> &nbsp; Establecer Dolares de Estados unidos (USD) como moneda por defecto
+         </a>
+         {/if}
+         <br/>
+      </div>
+      <div class="col-sm-6">
+         {if="$fsc->empresa->codpais=='USD'"}
+         <a href="{$fsc->url()}&opcion=pais" class="btn btn-block btn-success">
+            <span class="glyphicon glyphicon-ok"></span> &nbsp; Establecer Dolares de Estados unidos (USD) como moneda por defecto
+         </a>
+         {else}
+         <a href="{$fsc->url()}&opcion=pais" class="btn btn-block btn-default">
+            <span class="badge">2</span> &nbsp; Establecer Dolares de Estados unidos (USD) como moneda por defecto
+         </a>
+         {/if}
+         <br/>
+      </div>
+      <div class="col-sm-6">
+         {if="$fsc->impuestos_ok"}
+         <a href="{$fsc->url()}&opcion=iva" class="btn btn-block btn-success">
+            <span class="glyphicon glyphicon-ok"></span> &nbsp; Añadir impuestos para El Salvador
+         </a>
+         {else}
+         <a href="{$fsc->url()}&opcion=iva" class="btn btn-block btn-default">
+            <span class="badge">3</span> &nbsp; Añadir impuestos para El Salvador
+         </a>
+         {/if}
+         <br/>
+      </div>
+   </div>
+</div>
+
+{include="footer"}
