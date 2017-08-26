@@ -25,7 +25,7 @@ require_model('impuesto.php');
  *
  * @author @magjogui // Basado en el trabajo de Carlos@facturascripts.com
  */
-class admin_argentina extends fs_controller
+class admin_elsalvador extends fs_controller
 {
    public $impuestos_ok;
 
